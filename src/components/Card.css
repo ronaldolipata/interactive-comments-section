@@ -1,6 +1,5 @@
 .cardContainer {
-  background-color: white;
-  padding: 10px;
-  border-radius: 10px;
-  /* TODO: add box shadow */
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 0.625rem;
 }

@@ -2,6 +2,29 @@
   text-align: center;
 } */
 
+.avatar {
+  height: 2rem;
+  width: 2rem;
+}
+
+.contentContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttonPrimary {
+  background-color: hsl(238, 40%, 52%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0.625rem;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

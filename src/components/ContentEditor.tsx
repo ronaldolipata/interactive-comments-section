@@ -21,7 +21,7 @@ export default function ContentEditor({ editable }: ContentEditorProps) {
     ],
     editorProps: {
       attributes: {
-        css: 'padding'
+        class: 'prose'
       }
     }
   })
@@ -32,5 +32,5 @@ export default function ContentEditor({ editable }: ContentEditorProps) {
   }, [editable])
 
   // add other contents here such as user avatar.
-  return <EditorContent className="container" editor={editor} />
+  return <EditorContent className="editorBorder" editor={editor} />
 }
