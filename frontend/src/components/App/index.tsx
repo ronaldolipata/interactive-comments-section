@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      <ContentEditor />
+      <ContentEditor editable={true} />
     </div>
   );
 }

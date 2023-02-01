@@ -4,7 +4,7 @@ import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Placeholder from '@tiptap/extension-placeholder';
 
-import './style.module.scss';
+// import './style.module.scss';
 
 export interface ContentEditorProps {
   editable?: boolean;
