@@ -1,10 +1,10 @@
 import ContentEditor from '../ContentEditor';
-import './App.css';
+import '../../styles/main.css';
 
 function App() {
   return (
-    <div className='App'>
-      <ContentEditor editable={true} />
+    <div className='containe1r'>
+      <ContentEditor />
     </div>
   );
 }

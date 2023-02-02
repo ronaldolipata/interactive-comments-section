@@ -1,0 +1,11 @@
+@import './base.scss';
+
+.textEditorContainer {
+  @include comment-container();
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'input input'
+    'avatar button';
+  align-items: center;
+}
