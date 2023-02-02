@@ -1,17 +1,20 @@
 import "dotenv/config"
 
-import express, { Request, Response } from "express"
-import { PrismaClient } from "@prisma/client"
+import express from "express"
+import userEndpoint from "./routes/users"
 
 async function main() {
   const app = express()
   const port = process.env.PORT || 4000
+  const baseRoute = express.Router()
 
-  const prisma = new PrismaClient()
-
-  
+  app.use(express.json())
+  app.use("/api/v1", baseRoute)
+  baseRoute.use("/users", userEndpoint)
+  // baseRoute.use("/posts", userEndpoint)
 
   app.listen(port, () => {
+    // start server
     console.log("Server Started on http://localhost:" + port)
   })
 }
