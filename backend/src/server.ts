@@ -1,7 +1,7 @@
 import "dotenv/config"
 
 import express from "express"
-import userEndpoint from "./routes/users"
+import userEndpoint from "@routes/users"
 
 async function main() {
   const app = express()
