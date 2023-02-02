@@ -10,5 +10,7 @@
     "skipLibCheck": true,
     "removeComments": true,
     "sourceMap": true
-  }
+  },
+  "include": ["**/*.d.ts", "**/*.ts"],
+  "exclude": ["node_modules"]
 }
