@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "tsc:watch": "tsc --watch",
-    "dev": "nodemon --watch ./build/app.js",
-    "start": "node ./build/app.js",
+    "dev": "nodemon --watch ./build/server.js",
+    "start": "node ./build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
