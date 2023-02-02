@@ -1,36 +1,19 @@
-import { useEffect } from 'react';
-import { useEditor, EditorContent } from '@tiptap/react';
+import avatarProfile from '../../assets/images/avatars/image-juliusomo.png';
 
-import StarterKit from '@tiptap/starter-kit';
-import Placeholder from '@tiptap/extension-placeholder';
-
-// import './style.module.scss';
-
-export interface ContentEditorProps {
-  editable?: boolean;
+function ContentEditor() {
+  return (
+    <div className='textEditorContainer'>
+      <img className='avatarTextEditor' src={avatarProfile} alt='avatar' />
+      <textarea
+        className='inputTextEditor'
+        name='textEditor'
+        placeholder='Add a comment...'
+        cols={50}
+        rows={5}
+      ></textarea>
+      <button className='button'>SEND</button>
+    </div>
+  );
 }
 
-export default function ContentEditor({ editable }: ContentEditorProps) {
-  const editor = useEditor({
-    extensions: [
-      // TODO: add mention here using https://tiptap.dev/api/nodes/mention
-      StarterKit,
-      Placeholder.configure({
-        placeholder: 'Add a comment...',
-      }),
-    ],
-    editorProps: {
-      attributes: {
-        css: 'padding',
-      },
-    },
-  });
-
-  useEffect(() => {
-    // if editable props is present then make editor editable.
-    editable && editor?.setEditable(editable);
-  }, [editable]);
-
-  // add other contents here such as user avatar.
-  return <EditorContent className='container' editor={editor} />;
-}
+export default ContentEditor;

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+$moderateBlue: hsl(238, 40%, 52%);
+$softRed: hsl(358, 79%, 66%);
+$lightGrayishBlue: hsl(239, 57%, 85%);
+$paleRed: hsl(357, 100%, 86%);
+$darkBlue: hsl(212, 24%, 26%);
+$grayishBlue: hsl(211, 10%, 45%);
+$lightGray: hsl(223, 19%, 93%);
+$veryLightGray: hsl(228, 33%, 97%);
+$white: hsl(0, 0%, 100%);
+$fontFamily: 'Rubik', sans-serif;
+
+@mixin button() {
+  background-color: $moderateBlue;
+  color: $white;
+  padding: 1rem 2em;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 700;
+  display: inline-block;
+}
+
+@mixin comment-container() {
+  background-color: $white;
+  padding: 1rem;
+  border-radius: 6px;
+}
