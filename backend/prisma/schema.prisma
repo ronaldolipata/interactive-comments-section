@@ -17,3 +17,13 @@ model User {
 
   @@map(name: "users")
 }
+
+model Interaction {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  type      String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map(name: "interactions")
+}
