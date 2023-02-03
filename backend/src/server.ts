@@ -1,7 +1,9 @@
 import "dotenv/config"
 
 import express from "express"
-import userEndpoint from "./routes/users"
+
+import usersEndpoint from "./routes/users"
+import interactionsEndpoint from "./routes/interactions"
 
 async function main() {
   const app = express()
@@ -9,8 +11,11 @@ async function main() {
   const baseRoute = express.Router()
 
   app.use(express.json())
+
+  baseRoute.use("/users", usersEndpoint)
+  baseRoute.use("/interactions", interactionsEndpoint)
+
   app.use("/api/v1", baseRoute)
-  baseRoute.use("/users", userEndpoint)
 
   app.listen(port, () => {
     // start server
