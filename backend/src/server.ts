@@ -1,7 +1,7 @@
 import "dotenv/config"
 
 import express from "express"
-import userEndpoint from "@routes/users"
+import userEndpoint from "./routes/users"
 
 async function main() {
   const app = express()
@@ -11,7 +11,6 @@ async function main() {
   app.use(express.json())
   app.use("/api/v1", baseRoute)
   baseRoute.use("/users", userEndpoint)
-  // baseRoute.use("/posts", userEndpoint)
 
   app.listen(port, () => {
     // start server
