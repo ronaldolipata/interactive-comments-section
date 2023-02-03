@@ -18,12 +18,18 @@ model User {
   @@map(name: "users")
 }
 
+enum ActionType {
+  Comment
+  Upvote
+  Downvote
+}
+
 model Interaction {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  type      String
+  id        String      @id @default(auto()) @map("_id") @db.ObjectId
+  type      ActionType?
   content   String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
 
   @@map(name: "interactions")
 }
