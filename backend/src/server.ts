@@ -1,6 +1,7 @@
 import "dotenv/config"
 
 import express from "express"
+import cors from "cors"
 
 import usersEndpoint from "./routes/users"
 import interactionsEndpoint from "./routes/interactions"
@@ -10,6 +11,7 @@ async function main() {
   const port = process.env.PORT || 4000
   const baseRoute = express.Router()
 
+  app.use(cors({ origin: process.env.FONTEND_URL }))
   app.use(express.json())
 
   baseRoute.use("/users", usersEndpoint)
