@@ -1,0 +1,71 @@
+@import '../_base.scss';
+
+.comment-container {
+  @include comment-container();
+}
+
+.comment-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username {
+  font-weight: 700;
+}
+
+.comment-date {
+  opacity: 0.7;
+}
+
+.comment-text {
+  margin: 1rem 0;
+}
+
+.comment-sub-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upvote-container {
+  background-color: $veryLightGray;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
+}
+
+.upvote-count {
+  color: $moderateBlue;
+  font-weight: 700;
+}
+
+.upvote,
+.downvote {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  opacity: 0.7;
+}
+
+.left-arrow {
+  font-size: 1.5rem;
+}
+
+.reply-button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.upvote,
+.downvote,
+.reply-button {
+  color: $moderateBlue;
+  cursor: pointer;
+}
