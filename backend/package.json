@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev:nodemon": "nodemon --watch ./build/server.js",
+    "dev:nodemon": "nodemon ./build/server.js",
     "dev": "concurrently \"tsc --watch\" \"npm run dev:nodemon\"",
     "start": "node ./build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
