@@ -1,6 +1,7 @@
 import "dotenv/config"
 
 import express from "express"
+import limiter from "express-rate-limit"
 import cors from "cors"
 import helmet from "helmet"
 
@@ -12,6 +13,9 @@ async function main() {
   const port = process.env.PORT || 4000
   const baseRoute = express.Router()
 
+  const limit = limiter({ windowMs: 15 * 60 * 1000, max: 100 })
+
+  app.use(limit)
   app.use(cors({ origin: process.env.FONTEND_URL }))
   app.use(helmet())
   app.use(express.json())
