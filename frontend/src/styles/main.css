@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(228deg, 33%, 97%);
+  color: hsl(212deg, 24%, 26%);
+  font-family: "Rubik", sans-serif;
+  height: 100vh;
+  padding: 2rem;
+  line-height: 1.5rem;
+}
+
+.avatar {
+  grid-area: avatar;
+  width: 2rem;
+  height: 2rem;
+}
+
+.button-reset {
+  border: none;
+  background-color: transparent;
+}
+
+.container {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+.button {
+  background-color: hsl(238deg, 40%, 52%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 1rem 2em;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-container {
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.comment-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username {
+  font-weight: 700;
+}
+
+.comment-date {
+  opacity: 0.7;
+}
+
+.comment-text {
+  margin: 1rem 0;
+}
+
+.comment-sub-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upvote-container {
+  background-color: hsl(228deg, 33%, 97%);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
+}
+
+.upvote-count {
+  color: hsl(238deg, 40%, 52%);
+  font-weight: 700;
+}
+
+.upvote,
+.downvote {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  opacity: 0.7;
+}
+
+.left-arrow {
+  font-size: 1.5rem;
+}
+
+.reply-button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.upvote,
+.downvote,
+.reply-button {
+  color: hsl(238deg, 40%, 52%);
+  cursor: pointer;
+}
+
+.comment-box-container {
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "input input" "avatar button";
+  align-items: center;
+}
+
+.comment-box {
+  font-family: "Rubik", sans-serif;
+  border: 1px solid hsl(223deg, 19%, 93%);
+  grid-area: input;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  resize: none;
+}
+
+.send-button {
+  grid-area: button;
+}/*# sourceMappingURL=main.css.map */

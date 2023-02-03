@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive comments section
 
-![Design preview for the Interactive comments section coding challenge](./src/assets/design/desktop-preview.jpg)
+![Design preview for the Interactive comments section coding challenge](./frontend/src/assets/design/desktop-preview.jpg)
 
 ## Layout
 
