@@ -2,6 +2,7 @@ import "dotenv/config"
 
 import express from "express"
 import cors from "cors"
+import helmet from "helmet"
 
 import usersEndpoint from "./routes/users"
 import interactionsEndpoint from "./routes/interactions"
@@ -12,6 +13,7 @@ async function main() {
   const baseRoute = express.Router()
 
   app.use(cors({ origin: process.env.FONTEND_URL }))
+  app.use(helmet())
   app.use(express.json())
 
   baseRoute.use("/users", usersEndpoint)
@@ -20,7 +22,6 @@ async function main() {
   app.use("/api/v1", baseRoute)
 
   app.listen(port, () => {
-    // start server
     console.log("Server Started on http://localhost:" + port)
   })
 }
