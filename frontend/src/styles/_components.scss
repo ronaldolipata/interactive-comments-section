@@ -2,4 +2,5 @@
 
 .button {
   @include button;
+  cursor: pointer;
 }

@@ -1,0 +1,25 @@
+@import '../_base.scss';
+
+.comment-box-container {
+  @include comment-container();
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'input input'
+    'avatar button';
+  align-items: center;
+}
+
+.comment-box {
+  font-family: $fontFamily;
+  border: 1px solid $lightGray;
+  grid-area: input;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  resize: none;
+}
+
+.send-button {
+  grid-area: button;
+}

@@ -10,19 +10,20 @@ $lightGray: hsl(223, 19%, 93%);
 $veryLightGray: hsl(228, 33%, 97%);
 $white: hsl(0, 0%, 100%);
 $fontFamily: 'Rubik', sans-serif;
+$boxShadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 
 @mixin button() {
   background-color: $moderateBlue;
   color: $white;
   padding: 1rem 2em;
   border-radius: 0.5rem;
-  border: none;
   font-weight: 700;
-  display: inline-block;
+  border: none;
 }
 
 @mixin comment-container() {
   background-color: $white;
   padding: 1rem;
   border-radius: 6px;
+  box-shadow: $boxShadow;
 }
