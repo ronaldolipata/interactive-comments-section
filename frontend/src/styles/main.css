@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 *,
 *::before,
 *::after {
@@ -35,10 +36,10 @@ body {
   width: 100%;
   max-width: 50rem;
   margin-inline: auto;
+  position: relative;
 }
 
 .button {
-  background-color: hsl(238deg, 40%, 52%);
   color: hsl(0deg, 0%, 100%);
   padding: 1rem 2em;
   border-radius: 0.5rem;
@@ -142,5 +143,36 @@ body {
 }
 
 .send-button {
+  background-color: hsl(238deg, 40%, 52%);
   grid-area: button;
+}
+
+.modal-container {
+  background-color: hsl(212deg, 24%, 26%);
+  color: hsl(0deg, 0%, 100%);
+  position: absolute;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+.modal-text {
+  padding: 1rem 0;
+  opacity: 0.7;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  color: hsl(0deg, 0%, 100%);
+  padding: 1rem 2em;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  border: none;
 }/*# sourceMappingURL=main.css.map */
