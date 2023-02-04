@@ -1,6 +1,6 @@
 import { Schema, model, Model } from 'mongoose'
 
-enum InteractionType {
+export enum InteractionType {
   Comment = 'comment',
   Upvote = 'upvote',
   Downvote = 'downvote'
@@ -19,15 +19,19 @@ const interactionSchema = new Schema<
   Interaction
 >({
   type: {
+    type: String,
     required: true
   },
   content: {
+    type: String,
     required: true
   },
   createdAt: {
+    type: Date,
     default: () => Date.now()
   },
   updatedAt: {
+    type: Date,
     default: () => Date.now()
   }
 })
