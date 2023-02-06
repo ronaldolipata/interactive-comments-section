@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 *,
 *::before,
 *::after {
@@ -13,9 +14,11 @@ body {
   background-color: hsl(228deg, 33%, 97%);
   color: hsl(212deg, 24%, 26%);
   font-family: "Rubik", sans-serif;
-  height: 100vh;
-  padding: 2rem;
   line-height: 1.5rem;
+}
+
+.container-bg-dark {
+  background-color: hsl(212deg, 24%, 26%);
 }
 
 .avatar {
@@ -29,16 +32,25 @@ body {
   background-color: transparent;
 }
 
+#root {
+  padding: 2rem;
+}
+
 .container {
   display: grid;
   gap: 1rem;
   width: 100%;
   max-width: 50rem;
   margin-inline: auto;
+  position: relative;
+}
+
+.container-center {
+  display: grid;
+  place-items: center;
 }
 
 .button {
-  background-color: hsl(238deg, 40%, 52%);
   color: hsl(0deg, 0%, 100%);
   padding: 1rem 2em;
   border-radius: 0.5rem;
@@ -142,5 +154,57 @@ body {
 }
 
 .send-button {
+  background-color: hsl(238deg, 40%, 52%);
   grid-area: button;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  max-width: 20rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+.modal-text {
+  padding: 1rem 0;
+  opacity: 0.7;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  color: hsl(0deg, 0%, 100%);
+  padding: 1rem 2em;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.cancel-button {
+  background-color: hsl(212deg, 24%, 26%);
+}
+
+.delete-button {
+  background-color: hsl(358deg, 79%, 66%);
 }/*# sourceMappingURL=main.css.map */

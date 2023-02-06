@@ -3,5 +3,6 @@
 @import './_components.scss';
 
 // Styles from components
-@import './components/comment.scss';
-@import './components/commentBox.scss';
+@import './components/_comment.scss';
+@import './components/_commentBox.scss';
+@import './components/_deleteConfirmationModal.scss';

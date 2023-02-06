@@ -1,8 +1,22 @@
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from '@reduxjs/toolkit';
+import { actionCreators } from '../../state';
 import { FcUpLeft } from 'react-icons/fc';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import avatar1 from '../../assets/images/avatars/image-amyrobson.png';
 
 function Comment() {
+  // Initialize dispatch from react-redux
+  const dispatch = useDispatch();
+
+  // Initialize action creators
+  const { showDeleteModal } = bindActionCreators(actionCreators, dispatch);
+
+  // Pass true value to show the modal
+  function onClickHandler() {
+    showDeleteModal(true);
+  }
+
   return (
     <div className='comment-container'>
       <div className='comment-info'>
@@ -26,7 +40,7 @@ function Comment() {
             <AiOutlineMinus />
           </button>
         </div>
-        <button className='reply-button'>
+        <button onClick={onClickHandler} className='reply-button'>
           <FcUpLeft className='left-arrow' />
           Reply
         </button>
