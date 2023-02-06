@@ -6,14 +6,14 @@ import DeleteConfirmationModal from '../DeleteModal';
 import '../../styles/main.css';
 
 function App() {
-  // Initialize deleteModalStatus state
-  const deleteModalStatus = useSelector((state: State) => state.deleteModal);
+  // Initialize isDeleteModalActive state
+  const isDeleteModalActive = useSelector((state: State) => state.deleteModal);
 
   return (
     <div className='container'>
       <Comment />
       <CommentBox />
-      {deleteModalStatus && <DeleteConfirmationModal />}
+      {isDeleteModalActive && <DeleteConfirmationModal />}
     </div>
   );
 }

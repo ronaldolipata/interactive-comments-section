@@ -1,3 +1,7 @@
+#root {
+  padding: 2rem;
+}
+
 .container {
   display: grid;
   gap: 1rem;
@@ -5,4 +9,9 @@
   max-width: 50rem;
   margin-inline: auto;
   position: relative;
+}
+
+.container-center {
+  display: grid;
+  place-items: center;
 }

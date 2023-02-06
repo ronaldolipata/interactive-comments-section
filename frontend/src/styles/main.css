@@ -14,9 +14,11 @@ body {
   background-color: hsl(228deg, 33%, 97%);
   color: hsl(212deg, 24%, 26%);
   font-family: "Rubik", sans-serif;
-  height: 100vh;
-  padding: 2rem;
   line-height: 1.5rem;
+}
+
+.container-bg-dark {
+  background-color: hsl(212deg, 24%, 26%);
 }
 
 .avatar {
@@ -30,6 +32,10 @@ body {
   background-color: transparent;
 }
 
+#root {
+  padding: 2rem;
+}
+
 .container {
   display: grid;
   gap: 1rem;
@@ -37,6 +43,11 @@ body {
   max-width: 50rem;
   margin-inline: auto;
   position: relative;
+}
+
+.container-center {
+  display: grid;
+  place-items: center;
 }
 
 .button {
@@ -148,9 +159,21 @@ body {
 }
 
 .modal-container {
-  background-color: hsl(212deg, 24%, 26%);
-  color: hsl(0deg, 0%, 100%);
-  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  max-width: 20rem;
   padding: 2rem;
   border-radius: 0.5rem;
 }
@@ -175,4 +198,13 @@ body {
   border-radius: 0.5rem;
   font-weight: 700;
   border: none;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.cancel-button {
+  background-color: hsl(212deg, 24%, 26%);
+}
+
+.delete-button {
+  background-color: hsl(358deg, 79%, 66%);
 }/*# sourceMappingURL=main.css.map */
