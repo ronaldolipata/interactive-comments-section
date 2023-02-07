@@ -1,9 +1,8 @@
-import express from "express"
-
-import interact from "../controllers/interactions/interact"
+import express from 'express'
+import comment from '../controllers/interactions/comment'
 
 const router = express.Router()
 
-router.post("/interact", async (req, res) => await interact(req, res))
+router.post('/comment', comment)
 
 export default router
