@@ -23,10 +23,13 @@ function DeleteModal() {
           comment and can't be undone.
         </p>
         <div className='buttons-container'>
-          <button onClick={onClickHandler} className='button cancel-button'>
+          <button
+            onClick={onClickHandler}
+            className='button modal-cancel-button'
+          >
             NO, CANCEL
           </button>
-          <button className='button delete-button'>YES, DELETE</button>
+          <button className='button modal-delete-button'>YES, DELETE</button>
         </div>
       </div>
     </div>

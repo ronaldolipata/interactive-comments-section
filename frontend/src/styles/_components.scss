@@ -1,6 +1,6 @@
 @import './_base.scss';
 
 .button {
+  @include base-button;
   @include button;
-  cursor: pointer;
 }
