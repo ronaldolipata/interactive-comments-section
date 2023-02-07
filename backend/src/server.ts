@@ -7,7 +7,6 @@ import helmet from 'helmet'
 
 import mongoose from 'mongoose'
 
-import usersEndpoint from './routes/users'
 import interactionsEndpoint from './routes/interactions'
 
 async function main() {
@@ -24,7 +23,6 @@ async function main() {
   app.use(helmet())
   app.use(express.json())
 
-  baseRoute.use('/users', usersEndpoint)
   baseRoute.use('/interactions', interactionsEndpoint)
 
   app.use('/api/v1', baseRoute)

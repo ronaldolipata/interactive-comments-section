@@ -1,21 +1,16 @@
 import { Response } from 'express'
 
 import IncomingRequest from '../../utils/requests'
-import InteractionSchema, {
-  Interaction,
-  InteractionType
-} from '../../models/interactions'
+import InteractionSchema, { Interaction } from '../../models/interactions'
 
 export default async function handler(
   req: IncomingRequest<Interaction>,
   res: Response
 ) {
-  try {
-    const interaction = await InteractionSchema.create({
-      type: InteractionType.Comment,
-      content: 'Sample Contents'
-    })
+  const { type, content } = req.body
 
+  try {
+    const interaction = await InteractionSchema.create({ type, content })
     return res.status(201).json(interaction)
   } catch (error) {
     console.log(error)
