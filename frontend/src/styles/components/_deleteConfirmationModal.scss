@@ -1,0 +1,48 @@
+@import '../_base.scss';
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: $white;
+  box-shadow: $boxShadow;
+  max-width: 20rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+.modal-text {
+  padding: 1rem 0;
+  opacity: 0.7;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  @include button();
+  color: $white;
+}
+
+.cancel-button {
+  background-color: $darkBlue;
+}
+
+.delete-button {
+  background-color: $softRed;
+}

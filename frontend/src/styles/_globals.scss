@@ -11,9 +11,11 @@ body {
   background-color: $veryLightGray;
   color: $darkBlue;
   font-family: $fontFamily;
-  height: 100vh;
-  padding: 2rem;
   line-height: 1.5rem;
+}
+
+.container-bg-dark {
+  background-color: $darkBlue;
 }
 
 .avatar {

@@ -13,7 +13,6 @@ $fontFamily: 'Rubik', sans-serif;
 $boxShadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 
 @mixin button() {
-  background-color: $moderateBlue;
   color: $white;
   padding: 1rem 2em;
   border-radius: 0.5rem;
