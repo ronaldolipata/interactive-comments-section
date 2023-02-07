@@ -11,7 +11,7 @@ function CommentBox() {
   async function postComment() {
     try {
       const response = await fetch(
-        'https://9eda-136-158-44-177.ap.ngrok.io/api/v1/interactions/interact',
+        'http://localhost:4000/api/v1/interactions/comment',
         {
           method: 'POST',
           body: JSON.stringify({
