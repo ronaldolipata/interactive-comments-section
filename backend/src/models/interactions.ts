@@ -9,6 +9,7 @@ export enum InteractionType {
 export type Interaction = {
   type: InteractionType
   content: string
+  upvotes: number
   createdAt: Date
   updatedAt: Date
 }
@@ -25,6 +26,11 @@ const interactionSchema = new Schema<
   content: {
     type: String,
     required: true
+  },
+  upvotes: {
+    type: Number,
+    required: false,
+    default: 0
   },
   createdAt: {
     type: Date,
