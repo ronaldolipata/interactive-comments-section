@@ -13,7 +13,6 @@ import interactionsEndpoint from './routes/interactions'
 async function main() {
   const app = express()
   const port = process.env.PORT || 4000
-  const baseRoute = express.Router()
 
   const limit = limiter({ windowMs: 15 * 60 * 1000, max: 100 })
 
@@ -23,9 +22,12 @@ async function main() {
   app.use(cors({ origin: process.env.FONTEND_URL }))
   app.use(helmet())
   app.use(express.json())
+  app.use(express.urlencoded({ extended: true }))
 
-  baseRoute.use('/users', usersEndpoint)
+  const baseRoute = express.Router()
+  
   baseRoute.use('/interactions', interactionsEndpoint)
+  baseRoute.use('/users', usersEndpoint)
 
   app.use('/api/v1', baseRoute)
 

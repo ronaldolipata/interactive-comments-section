@@ -21,14 +21,14 @@ export default async function handler(
     })
 
     if (user) {
-      const isMatched = await compare(password, user.password)
-
-      if (isMatched) {
-        return res.status(200).json({ message: 'Successfully authenticated' })
-      }
+      compare(password, user?.password, function (err, result) {
+        if (result) {
+          return res.status(200).json({ message: 'successfully authenticated' })
+        }
+      })
+    } else {
+      return res.status(404).json({ error: `${identity} not found` })
     }
-
-    return res.status(404).json({ error: `${identity} not found` })
   } catch (error) {
     console.log(error)
     return res.status(400).end()
