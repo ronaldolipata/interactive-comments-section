@@ -3,6 +3,7 @@ import { compare } from 'bcrypt'
 
 import UserSchema from '../../models/users'
 import IncomingRequest from '../../utils/requests'
+import { createAccessToken } from '../../utils/createToken'
 
 export type RequestBody = {
   identity: string
@@ -21,8 +22,12 @@ export default async function handler(
     })
 
     if (user) {
-      compare(password, user?.password, function (err, result) {
+      compare(password, user?.password, async function (err, result) {
         if (result) {
+          res.cookie(
+            'access-token',
+            await createAccessToken(user._id.toString())
+          )
           return res.status(200).json({ message: 'successfully authenticated' })
         }
       })
