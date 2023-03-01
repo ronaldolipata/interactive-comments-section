@@ -14,11 +14,7 @@ body {
   background-color: hsl(228deg, 33%, 97%);
   color: hsl(212deg, 24%, 26%);
   font-family: "Rubik", sans-serif;
-  line-height: 1.5rem;
-}
-
-.container-bg-dark {
-  background-color: hsl(212deg, 24%, 26%);
+  line-height: 1.5;
 }
 
 .avatar {
@@ -52,11 +48,11 @@ body {
 
 .button {
   color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
   padding: 1rem 2em;
   border-radius: 0.5rem;
   font-weight: 700;
   border: none;
-  cursor: pointer;
 }
 
 .comment-container {
@@ -72,8 +68,21 @@ body {
   gap: 1rem;
 }
 
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .username {
   font-weight: 700;
+}
+
+.own-comment-indication {
+  background-color: hsl(238deg, 40%, 52%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
 }
 
 .comment-date {
@@ -111,11 +120,16 @@ body {
   opacity: 0.7;
 }
 
-.left-arrow {
+.reply-delete-edit-button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.left-arrow-icon {
   font-size: 1.5rem;
 }
 
-.reply-button {
+.button-reset {
   border: none;
   background-color: transparent;
   font-size: 1rem;
@@ -123,6 +137,21 @@ body {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+.button-center {
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.delete-button {
+  color: hsl(358deg, 79%, 66%);
+}
+
+.edit-button {
+  color: hsl(238deg, 40%, 52%);
 }
 
 .upvote,
@@ -194,17 +223,17 @@ body {
 
 .button {
   color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
   padding: 1rem 2em;
   border-radius: 0.5rem;
   font-weight: 700;
   border: none;
-  color: hsl(0deg, 0%, 100%);
 }
 
-.cancel-button {
-  background-color: hsl(212deg, 24%, 26%);
+.modal-cancel-button {
+  background-color: hsl(211deg, 10%, 45%);
 }
 
-.delete-button {
+.modal-delete-button {
   background-color: hsl(358deg, 79%, 66%);
 }/*# sourceMappingURL=main.css.map */

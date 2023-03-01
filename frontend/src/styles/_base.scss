@@ -12,8 +12,12 @@ $white: hsl(0, 0%, 100%);
 $fontFamily: 'Rubik', sans-serif;
 $boxShadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 
-@mixin button() {
+@mixin base-button() {
   color: $white;
+  cursor: pointer;
+}
+
+@mixin button() {
   padding: 1rem 2em;
   border-radius: 0.5rem;
   font-weight: 700;

@@ -35,14 +35,14 @@
 }
 
 .button {
+  @include base-button();
   @include button();
-  color: $white;
 }
 
-.cancel-button {
-  background-color: $darkBlue;
+.modal-cancel-button {
+  background-color: $grayishBlue;
 }
 
-.delete-button {
+.modal-delete-button {
   background-color: $softRed;
 }

@@ -10,8 +10,21 @@
   gap: 1rem;
 }
 
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .username {
   font-weight: 700;
+}
+
+.own-comment-indication {
+  background-color: $moderateBlue;
+  color: $white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
 }
 
 .comment-date {
@@ -49,11 +62,16 @@
   opacity: 0.7;
 }
 
-.left-arrow {
+.reply-delete-edit-button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.left-arrow-icon {
   font-size: 1.5rem;
 }
 
-.reply-button {
+.button-reset {
   border: none;
   background-color: transparent;
   font-size: 1rem;
@@ -61,6 +79,20 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+.button-center {
+  @include base-button;
+  display: flex;
+  align-items: center;
+}
+
+.delete-button {
+  color: $softRed;
+}
+
+.edit-button {
+  color: $moderateBlue;
 }
 
 .upvote,

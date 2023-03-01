@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from '@reduxjs/toolkit';
 import { actionCreators } from '../../state';
-import { FcUpLeft } from 'react-icons/fc';
+import { IoMdTrash } from 'react-icons/io';
+import { RiPencilFill } from 'react-icons/ri';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import avatar1 from '../../assets/images/avatars/image-amyrobson.png';
 
@@ -13,15 +14,21 @@ function Comment() {
   const { showDeleteModal } = bindActionCreators(actionCreators, dispatch);
 
   // Pass true value to show the modal
-  function onClickHandler() {
+  function onClickDeleteHandler() {
     showDeleteModal(true);
   }
+
+  // Pass true value to show the modal
+  function onClickEditHandler() {}
 
   return (
     <div className='comment-container'>
       <div className='comment-info'>
-        <img className='avatar' src={avatar1} alt='avatar' />
-        <span className='username'>amyrobson</span>
+        <div className='user-info'>
+          <img className='avatar' src={avatar1} alt='avatar' />
+          <span className='username'>amyrobson</span>
+          <span className='own-comment-indication'>you</span>
+        </div>
         <span className='comment-date'>1 month ago</span>
       </div>
       <p className='comment-text'>
@@ -40,10 +47,26 @@ function Comment() {
             <AiOutlineMinus />
           </button>
         </div>
-        <button onClick={onClickHandler} className='reply-button'>
-          <FcUpLeft className='left-arrow' />
+        <div className='reply-delete-edit-button-container'>
+          {/* <button onClick={onClickHandler} className='button-reset reply-button'>
+          <FcUpLeft className='left-arrow-icon' />
           Reply
-        </button>
+        </button> */}
+          <button
+            onClick={onClickDeleteHandler}
+            className='button-reset button-center delete-button'
+          >
+            <IoMdTrash className='delete-icon' />
+            Delete
+          </button>
+          <button
+            onClick={onClickEditHandler}
+            className='button-reset button-center edit-button'
+          >
+            <RiPencilFill className='edit-icon' />
+            Edit
+          </button>
+        </div>
       </div>
     </div>
   );
