@@ -11,8 +11,8 @@
 }
 
 body {
-  background-color: hsl(228deg, 33%, 97%);
-  color: hsl(212deg, 24%, 26%);
+  background-color: hsl(228, 33%, 97%);
+  color: hsl(212, 24%, 26%);
   font-family: "Rubik", sans-serif;
   line-height: 1.5;
 }
@@ -47,7 +47,7 @@ body {
 }
 
 .button {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
   padding: 1rem 2em;
   border-radius: 0.5rem;
@@ -56,7 +56,7 @@ body {
 }
 
 .comment-container {
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   padding: 1rem;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
@@ -79,8 +79,8 @@ body {
 }
 
 .own-comment-indication {
-  background-color: hsl(238deg, 40%, 52%);
-  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(238, 40%, 52%);
+  color: hsl(0, 0%, 100%);
   padding: 0.1rem 0.5rem;
   border-radius: 3px;
 }
@@ -99,7 +99,7 @@ body {
 }
 
 .upvote-container {
-  background-color: hsl(228deg, 33%, 97%);
+  background-color: hsl(228, 33%, 97%);
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -108,7 +108,7 @@ body {
 }
 
 .upvote-count {
-  color: hsl(238deg, 40%, 52%);
+  color: hsl(238, 40%, 52%);
   font-weight: 700;
 }
 
@@ -140,29 +140,29 @@ body {
 }
 
 .button-center {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
 .delete-button {
-  color: hsl(358deg, 79%, 66%);
+  color: hsl(358, 79%, 66%);
 }
 
 .edit-button {
-  color: hsl(238deg, 40%, 52%);
+  color: hsl(238, 40%, 52%);
 }
 
 .upvote,
 .downvote,
 .reply-button {
-  color: hsl(238deg, 40%, 52%);
+  color: hsl(238, 40%, 52%);
   cursor: pointer;
 }
 
 .comment-box-container {
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   padding: 1rem;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
@@ -174,7 +174,7 @@ body {
 
 .comment-box {
   font-family: "Rubik", sans-serif;
-  border: 1px solid hsl(223deg, 19%, 93%);
+  border: 1px solid hsl(223, 19%, 93%);
   grid-area: input;
   margin-bottom: 1rem;
   padding: 0.75rem 1rem;
@@ -183,7 +183,7 @@ body {
 }
 
 .send-button {
-  background-color: hsl(238deg, 40%, 52%);
+  background-color: hsl(238, 40%, 52%);
   grid-area: button;
 }
 
@@ -200,9 +200,10 @@ body {
 }
 
 .modal-content {
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   max-width: 20rem;
+  margin: 0 1rem;
   padding: 2rem;
   border-radius: 0.5rem;
 }
@@ -222,7 +223,7 @@ body {
 }
 
 .button {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
   padding: 1rem 2em;
   border-radius: 0.5rem;
@@ -231,9 +232,9 @@ body {
 }
 
 .modal-cancel-button {
-  background-color: hsl(211deg, 10%, 45%);
+  background-color: hsl(211, 10%, 45%);
 }
 
 .modal-delete-button {
-  background-color: hsl(358deg, 79%, 66%);
+  background-color: hsl(358, 79%, 66%);
 }/*# sourceMappingURL=main.css.map */
