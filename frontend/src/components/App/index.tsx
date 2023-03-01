@@ -1,19 +1,20 @@
-import { useSelector } from 'react-redux';
-import { State } from '../../state';
+import { useAppSelector } from '../../store/hooks';
 import Comment from '../Comment';
 import CommentBox from '../CommentBox';
 import DeleteConfirmationModal from '../DeleteModal';
 import '../../styles/main.css';
 
 function App() {
-  // Initialize isDeleteModalActive state
-  const isDeleteModalActive = useSelector((state: State) => state.deleteModal);
+  // Initialize showDeleteModal state
+  const showDeleteModal = useAppSelector(
+    (state) => state.deleteModal.showDeleteModal
+  );
 
   return (
     <div className='container'>
       <Comment />
       <CommentBox />
-      {isDeleteModalActive && <DeleteConfirmationModal />}
+      {showDeleteModal && <DeleteConfirmationModal />}
     </div>
   );
 }

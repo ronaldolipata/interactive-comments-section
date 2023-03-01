@@ -1,23 +1,20 @@
-import { useDispatch } from 'react-redux';
-import { bindActionCreators } from '@reduxjs/toolkit';
-import { actionCreators } from '../../state';
+import { useAppDispatch } from '../../store/hooks';
+import { show } from '../../store/features/delete/deleteModalSlice';
 import { IoMdTrash } from 'react-icons/io';
 import { RiPencilFill } from 'react-icons/ri';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import avatar1 from '../../assets/images/avatars/image-amyrobson.png';
 
 function Comment() {
-  // Initialize dispatch from react-redux
-  const dispatch = useDispatch();
+  // Initialize dispatch from useAppDispatch hook
+  const dispatch = useAppDispatch();
 
-  // Initialize action creators
-  const { showDeleteModal } = bindActionCreators(actionCreators, dispatch);
-
-  // Pass true value to show the modal
+  // Pass the action to dispatch to show the modal
   function onClickDeleteHandler() {
-    showDeleteModal(true);
+    dispatch(show(true));
   }
 
+  // TO DO
   // Pass true value to show the modal
   function onClickEditHandler() {}
 
@@ -48,10 +45,6 @@ function Comment() {
           </button>
         </div>
         <div className='reply-delete-edit-button-container'>
-          {/* <button onClick={onClickHandler} className='button-reset reply-button'>
-          <FcUpLeft className='left-arrow-icon' />
-          Reply
-        </button> */}
           <button
             onClick={onClickDeleteHandler}
             className='button-reset button-center delete-button'
