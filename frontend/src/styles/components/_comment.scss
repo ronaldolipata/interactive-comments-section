@@ -28,14 +28,15 @@
 }
 
 .comment-date {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .comment-text {
   margin: 1rem 0;
+  opacity: 0.8;
 }
 
-.comment-sub-container {
+.interactions-container {
   display: flex;
   justify-content: space-between;
 }
@@ -62,7 +63,7 @@
   opacity: 0.7;
 }
 
-.reply-delete-edit-button-container {
+.delete-edit-container {
   display: flex;
   gap: 1rem;
 }
@@ -85,19 +86,20 @@
   @include base-button;
   display: flex;
   align-items: center;
+  gap: 0.3rem;
 }
 
 .delete-button {
   color: $softRed;
 }
 
-.edit-button {
+.edit-button,
+.reply-button {
   color: $moderateBlue;
 }
 
 .upvote,
-.downvote,
-.reply-button {
+.downvote {
+  @include base-button;
   color: $moderateBlue;
-  cursor: pointer;
 }
