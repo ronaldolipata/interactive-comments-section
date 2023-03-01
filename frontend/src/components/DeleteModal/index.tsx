@@ -1,17 +1,13 @@
-import { useDispatch } from 'react-redux';
-import { actionCreators } from '../../state';
-import { bindActionCreators } from '@reduxjs/toolkit';
+import { useAppDispatch } from '../../store/hooks';
+import { show } from '../../store/features/delete/deleteModalSlice';
 
 function DeleteModal() {
-  // Initialize dispatch from react-redux
-  const dispatch = useDispatch();
+  // Initialize dispatch from useAppDispatch hook
+  const dispatch = useAppDispatch();
 
-  // Initialize action creators
-  const { showDeleteModal } = bindActionCreators(actionCreators, dispatch);
-
-  // Pass false value to hide the modal
-  function onClickHandler() {
-    showDeleteModal(false);
+  // Pass the action to dispatch to hide the modal
+  function onClickCancelHandler() {
+    dispatch(show(false));
   }
 
   return (
@@ -24,7 +20,7 @@ function DeleteModal() {
         </p>
         <div className='buttons-container'>
           <button
-            onClick={onClickHandler}
+            onClick={onClickCancelHandler}
             className='button modal-cancel-button'
           >
             NO, CANCEL
