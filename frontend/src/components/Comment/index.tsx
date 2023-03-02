@@ -24,23 +24,23 @@ function Comment() {
   return (
     <>
       {data.comments.map(({ id, content, createdAt, score, user, replies }) => (
-        <div key={id} className='comment-container'>
-          <div className='comment-info'>
-            <div className='user-info'>
-              <img className='avatar' src={user.image.png} alt='avatar' />
-              <span className='username'>{user.username}</span>
-              {currentUser === user.username ? (
-                <>
-                  <span className='own-comment-indication'>you</span>
-                </>
-              ) : (
-                false
-              )}
+        <>
+          <div key={id} className='comment-container'>
+            <div className='comment-info'>
+              <div className='user-info'>
+                <img className='avatar' src={user.image.png} alt='avatar' />
+                <span className='username'>{user.username}</span>
+                {currentUser === user.username ? (
+                  <>
+                    <span className='own-comment-indication'>you</span>
+                  </>
+                ) : (
+                  false
+                )}
+              </div>
+              <span className='comment-date'>{createdAt}</span>
             </div>
-            <span className='comment-date'>{createdAt}</span>
-          </div>
-          <p className='comment-text'>{content}</p>
-          <div className='interactions-container'>
+            <p className='comment-text'>{content}</p>
             <div className='upvote-container'>
               <button className='button-reset upvote'>
                 <AiOutlinePlus />
@@ -50,7 +50,7 @@ function Comment() {
                 <AiOutlineMinus />
               </button>
             </div>
-            <div className='delete-edit-container'>
+            <div className='delete-edit-reply-container'>
               {currentUser === user.username ? (
                 <>
                   <button
@@ -78,7 +78,68 @@ function Comment() {
               )}
             </div>
           </div>
-        </div>
+          <div className='replies-container'>
+            {replies.map(({ id, content, createdAt, replyingTo, user }) => (
+              <div
+                key={id}
+                className='comment-container reply-commment-container'
+              >
+                <div className='comment-info'>
+                  <div className='user-info'>
+                    <img className='avatar' src={user.image.png} alt='avatar' />
+                    <span className='username'>{user.username}</span>
+                    {currentUser === user.username ? (
+                      <span className='own-comment-indication'>you</span>
+                    ) : (
+                      false
+                    )}
+                  </div>
+                  <span className='comment-date'>{createdAt}</span>
+                </div>
+                <p className='comment-text'>
+                  <span className='replyingTo'>@{replyingTo}</span>
+                  {content}
+                </p>
+                <div className='upvote-container'>
+                  <button className='button-reset upvote'>
+                    <AiOutlinePlus />
+                  </button>
+                  <div className='upvote-count'>{score}</div>
+                  <button className='button-reset downvote'>
+                    <AiOutlineMinus />
+                  </button>
+                </div>
+                <div className='delete-edit-reply-container'>
+                  {currentUser === user.username ? (
+                    <>
+                      <button
+                        onClick={onClickDeleteHandler}
+                        className='button-reset button-center delete-button'
+                      >
+                        <IoMdTrash className='delete-icon' />
+                        Delete
+                      </button>
+                      <button
+                        onClick={onClickEditHandler}
+                        className='button-reset button-center edit-button'
+                      >
+                        <RiPencilFill className='edit-icon' />
+                        Edit
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <button className='button-reset button-center reply-button'>
+                        <FaReply />
+                        Reply
+                      </button>
+                    </>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
       ))}
     </>
   );

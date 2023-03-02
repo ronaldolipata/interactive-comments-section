@@ -2,12 +2,55 @@
 
 .comment-container {
   @include comment-container();
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'comment-info comment-info comment-info'
+    'comment-text comment-text comment-text'
+    'upvote . delete-edit-reply';
+  margin-bottom: 1rem;
+}
+
+// .comment-container:last-child {
+//   margin-bottom: 0;
+// }
+
+.upvote-container {
+  background-color: $veryLightGray;
+  grid-area: upvote;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
 }
 
 .comment-info {
+  grid-area: comment-info;
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.delete-edit-reply-container {
+  grid-area: delete-edit-reply;
+  display: flex;
+  gap: 1rem;
+  justify-self: flex-end;
+}
+
+.comment-text {
+  grid-area: comment-text;
+  margin: 1rem 0;
+  opacity: 0.8;
+}
+
+.replies-container {
+  border-left: 2px solid $lightGray;
+}
+
+.reply-commment-container {
+  margin-left: 1rem;
 }
 
 .user-info {
@@ -31,23 +74,9 @@
   opacity: 0.8;
 }
 
-.comment-text {
-  margin: 1rem 0;
-  opacity: 0.8;
-}
-
-.interactions-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.upvote-container {
-  background-color: $veryLightGray;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border-radius: 0.7rem;
+.replyingTo {
+  font-weight: 700;
+  color: $moderateBlue;
 }
 
 .upvote-count {
@@ -61,11 +90,6 @@
   align-items: center;
   font-size: 1.3rem;
   opacity: 0.7;
-}
-
-.delete-edit-container {
-  display: flex;
-  gap: 1rem;
 }
 
 .left-arrow-icon {
@@ -102,4 +126,34 @@
 .downvote {
   @include base-button;
   color: $moderateBlue;
+}
+
+/* 768px */
+@media (min-width: 48rem) {
+  .comment-container {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr 1fr;
+    grid-template-areas:
+      'upvote comment-info delete-edit-reply'
+      'upvote comment-text comment-text';
+    padding: 1.5rem;
+  }
+
+  .upvote-container {
+    flex-direction: column;
+    max-height: 5.5rem;
+    justify-self: flex-start;
+  }
+
+  .comment-text {
+    margin-bottom: 0;
+  }
+
+  .replies-container {
+    margin-left: 2.5rem;
+  }
+
+  .reply-commment-container {
+    margin-left: 2.5rem;
+  }
 }
