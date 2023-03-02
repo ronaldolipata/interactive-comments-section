@@ -1,17 +1,10 @@
 #root {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .container {
   display: grid;
-  gap: 1rem;
   width: 100%;
   max-width: 50rem;
   margin-inline: auto;
-  position: relative;
-}
-
-.container-center {
-  display: grid;
-  place-items: center;
 }
