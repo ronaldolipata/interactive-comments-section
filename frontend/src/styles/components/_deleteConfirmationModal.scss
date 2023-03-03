@@ -38,6 +38,7 @@
 .button {
   @include base-button();
   @include button();
+  font-size: 0.9rem;
 }
 
 .modal-cancel-button {
