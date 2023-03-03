@@ -44,6 +44,7 @@ body {
   cursor: pointer;
   padding: 1rem 2em;
   border-radius: 0.5rem;
+  font-size: 1rem;
   font-weight: 700;
   border: none;
 }
@@ -203,8 +204,8 @@ body {
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-areas: "input input" "avatar button";
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "input input input" "avatar . button";
   align-items: center;
 }
 
@@ -223,6 +224,13 @@ body {
   grid-area: button;
 }
 
+@media (min-width: 48rem) {
+  .comment-box-container {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "avatar input button" ". input .";
+    gap: 1rem;
+  }
+}
 .modal-container {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -263,6 +271,7 @@ body {
   cursor: pointer;
   padding: 1rem 2em;
   border-radius: 0.5rem;
+  font-size: 1rem;
   font-weight: 700;
   border: none;
 }

@@ -20,13 +20,13 @@ $boxShadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 @mixin button() {
   padding: 1rem 2em;
   border-radius: 0.5rem;
+  font-size: 1rem;
   font-weight: 700;
   border: none;
 }
 
 @mixin comment-container() {
   background-color: $white;
-  // margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 6px;
   box-shadow: $boxShadow;

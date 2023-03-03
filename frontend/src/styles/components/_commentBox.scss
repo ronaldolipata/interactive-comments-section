@@ -3,10 +3,11 @@
 .comment-box-container {
   @include comment-container();
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  // grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: auto 1fr auto;
   grid-template-areas:
-    'input input'
-    'avatar button';
+    'input input input'
+    'avatar . button';
   align-items: center;
 }
 
@@ -23,4 +24,14 @@
 .send-button {
   background-color: $moderateBlue;
   grid-area: button;
+}
+
+@media (min-width: 48rem) {
+  .comment-box-container {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      'avatar input button'
+      '. input .';
+    gap: 1rem;
+  }
 }
