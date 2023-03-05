@@ -1,10 +1,10 @@
-import { useAppSelector } from '../../store/hooks';
-import Comment from '../Comment';
-import CommentBox from '../CommentBox';
-import DeleteConfirmationModal from '../DeleteModal';
-import '../../styles/main.css';
+import { useAppSelector } from '../store/hooks';
+import Comment from './Comment';
+import CommentBox from './CommentBox';
+import DeleteConfirmationModal from './DeleteModal';
+import '../styles/main.css';
 import { useDispatch } from 'react-redux';
-import { initializeComments } from '../../store/features/comments/commentsSlice';
+import { initializeComments } from '../store/features/comments/commentsSlice';
 import { useEffect } from 'react';
 
 function App() {

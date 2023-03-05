@@ -1,7 +1,7 @@
-import data from '../../data.json';
-import CommentActions from '../CommentActions';
-import CommentScore from '../CommentScore';
-import UserInfo from '../UserInfo';
+import data from '../data.json';
+import CommentActions from './CommentActions';
+import CommentScore from './CommentScore';
+import UserInfo from './UserInfo';
 
 function Comment() {
   const currentUser = data.currentUser.username;

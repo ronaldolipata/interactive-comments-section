@@ -2,8 +2,8 @@ import { FaReply } from 'react-icons/fa';
 import { IoMdTrash } from 'react-icons/io';
 import { RiPencilFill } from 'react-icons/ri';
 
-import { useAppDispatch } from '../../store/hooks';
-import { show } from '../../store/features/delete/deleteModalSlice';
+import { useAppDispatch } from '../store/hooks';
+import { show } from '../store/features/delete/deleteModalSlice';
 
 export interface CommentActionProps {
   isOwnComment: boolean;

@@ -1,5 +1,5 @@
 import { useState, ChangeEvent } from 'react';
-import avatarProfile from '../../assets/images/avatars/image-juliusomo.png';
+import avatarProfile from '../assets/images/avatars/image-juliusomo.png';
 
 function CommentBox() {
   const [textarea, setTextArea] = useState('');
@@ -32,16 +32,16 @@ function CommentBox() {
   }
 
   return (
-    <div className='comment-box-container comment-container'>
-      <img className='avatar' src={avatarProfile} alt='avatar' />
+    <div className="comment-box-container comment-container">
+      <img className="avatar" src={avatarProfile} alt="avatar" />
       <textarea
         onChange={textAreaHandler}
-        className='comment-box'
-        name='comment-box'
-        placeholder='Add a comment...'
+        className="comment-box"
+        name="comment-box"
+        placeholder="Add a comment..."
         rows={5}
       ></textarea>
-      <button onClick={postComment} className='button send-button'>
+      <button onClick={postComment} className="button send-button">
         SEND
       </button>
     </div>
