@@ -9,10 +9,8 @@ function Comment() {
   return (
     <>
       {data.comments.map(({ id, content, createdAt, score, user, replies }) => (
-        // TODO: key={id} should be in the top level
-        // instead of separating comment to its replies we should combine them
-        <>
-          <div key={id} className="comment-container">
+        <div key={id}>
+          <div className="comment-container">
             <div className="comment-info">
               <UserInfo user={user} />
               <span className="comment-date">{createdAt}</span>
@@ -41,7 +39,7 @@ function Comment() {
               </div>
             ))}
           </div>
-        </>
+        </div>
       ))}
     </>
   );
